@@ -1362,13 +1362,7 @@ ul.actions.special {
     }
 }
 
-/* --- International Leadership İçin Özel 2'li Grid --- */
-@media screen and (min-width: 769px) {
-    #leadership-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        max-width: 50em !important; /* Çok fazla uzamasın, derli toplu dursun */
-    }
-}
+
 
 /* --- International Leadership İçin Özel 2'li Grid Düzeltmesi --- */
 @media screen and (min-width: 769px) {
@@ -1396,4 +1390,21 @@ ul.actions.special {
         max-width: calc(100% - 2em) !important;
         border-radius: 8px 8px 0 0 !important;
     }
+}
+
+/* Proje kutularındaki açıklamaları iki yana yasla (Butonlar ve başlıklar etkilenmez) */
+#projects div[style*="background"] p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+}
+/* --- BÖLÜM BAŞLIKLARININ ÜSTÜNDEKİ FAZLA BOŞLUKLARI TIRAŞLAMA --- */
+
+/* Ana bölümlerin (About, Skills, Projects, Contact vb.) üstündeki 5em'lik dev boşluğu 2.5em'e düşürüyoruz */
+#main > .main {
+    padding-top: 2.5em !important; 
+}
+
+/* Sayfa içindeki alt başlıkların üstünde kalan fazladan boşlukları da kısıp daha kompakt yapıyoruz */
+header.major {
+    padding-top: 1em !important;
 }
