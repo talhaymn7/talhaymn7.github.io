@@ -9,8 +9,8 @@
 
 /* Header Profil Fotoğrafı Düzenlemesi */
 #header .logo img {
-	width: 160px;
-	height: 160px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 	object-fit: cover;
 	border: 4px solid rgba(255, 255, 255, 0.3);
@@ -1340,4 +1340,60 @@ ul.actions.special {
 
 .button.icon::before {
     margin-right: 1em !important;
+}
+
+/* --- EKRANI VE KUTULARI YANLAMASINA GENİŞLETME AYARI --- */
+
+/* 1. Sitenin ana iskeletini yanlamasına büyütüyoruz */
+#wrapper {
+    width: 78em !important; /* Orijinal 64em'den 78em'e çıkardık, site genişledi */
+    max-width: calc(100% - 2em) !important;
+}
+
+/* 2. Orta bölümün gereksiz yan boşluklarını kısıp alanı kutulara veriyoruz */
+#main > .main {
+    padding: 5em 3em 3em 3em !important; 
+}
+
+/* 3. Kutuların içindeki yazıların kenarlara çok çarpmaması için ince bir ayar */
+@media screen and (min-width: 1280px) {
+    .features li {
+        padding: 2.5em 1.5em !important;
+    }
+}
+
+/* --- International Leadership İçin Özel 2'li Grid --- */
+@media screen and (min-width: 769px) {
+    #leadership-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        max-width: 50em !important; /* Çok fazla uzamasın, derli toplu dursun */
+    }
+}
+
+/* --- International Leadership İçin Özel 2'li Grid Düzeltmesi --- */
+@media screen and (min-width: 769px) {
+    /* 4'lü kuralı ezmek için hem id hem de üst id'yi belirtiyoruz */
+    #projects #leadership-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        max-width: 65em !important; /* Kutular çok uzun olmasın, şık dursun diye genişliği sınırladık */
+        margin: 0 auto !important; /* Kutuları ekranın tam ortasına kilitler */
+    }
+}
+
+/* --- NAVBAR (MENÜ) TAM GENİŞLİK VE HİZALAMA FIX --- */
+#nav, #nav.alt {
+    width: 100% !important;
+    max-width: 78em !important; /* Sitenin yeni iskeletiyle tam eşitliyoruz */
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important; /* Ekranın tam ortasına kilitler */
+    border-radius: 12px 12px 0 0 !important; /* Üst köşelere hafif ve şık bir kavis */
+}
+
+/* Mobilde ekran dışına taşmasını engellemek için güvenlik ayarı */
+@media screen and (max-width: 768px) {
+    #nav, #nav.alt {
+        max-width: calc(100% - 2em) !important;
+        border-radius: 8px 8px 0 0 !important;
+    }
 }
