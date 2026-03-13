@@ -1190,58 +1190,65 @@ header.major h2:after {
 
 /* 6. KUSURSUZ GRID SİSTEMİ (Masaüstü Taşma ve Mobil Sıkışma Çözümü) */
 .features {
-    display: grid !important;
-    gap: 2em !important; /* Kutular arası boşluk */
-    margin: 0 auto !important; /* Grid'in kendisini tam ortaya hizalar */
-    width: 100% !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
+	display: grid !important;
+	gap: 2em !important;
+	/* Kutular arası boşluk */
+	margin: 0 auto !important;
+	/* Grid'in kendisini tam ortaya hizalar */
+	width: 100% !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
 }
 
 .features li {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    background: rgba(255, 255, 255, 0.02) !important;
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
-    border-radius: 20px !important;
-    padding: 2.5em 1.5em !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0 !important;
+	background: rgba(255, 255, 255, 0.02) !important;
+	border: 1px solid rgba(255, 255, 255, 0.05) !important;
+	border-radius: 20px !important;
+	padding: 2.5em 1.5em !important;
+	text-align: center !important;
+	box-sizing: border-box !important;
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
 }
 
 .features li:hover {
-    transform: translateY(-10px) !important;
-    background: rgba(255, 255, 255, 0.05) !important;
-    border-color: rgba(140, 201, 240, 0.4) !important;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4) !important;
+	transform: translateY(-10px) !important;
+	background: rgba(255, 255, 255, 0.05) !important;
+	border-color: rgba(140, 201, 240, 0.4) !important;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Masaüstü Ekranlar (minmax(0, 1fr) ile kutuların taşması kesin olarak engellenir) */
 @media screen and (min-width: 1280px) {
-    #skills .features, #projects .features { 
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important; 
-    }
-    #vision .features { 
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important; 
-    }
+
+	#skills .features,
+	#projects .features {
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+	}
+
+	#vision .features {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
 }
 
 /* Tablet Ekranlar (2'li Sütun) */
 @media screen and (max-width: 1279px) and (min-width: 769px) {
-    .features { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+	.features {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
 }
 
 /* Mobil Ekranlar (Tek Sütun - Kutular alt alta ferah ferah dizilir) */
 @media screen and (max-width: 768px) {
-    .features { 
-        grid-template-columns: minmax(0, 1fr) !important; 
-        gap: 1.5em !important;
-    }
+	.features {
+		grid-template-columns: minmax(0, 1fr) !important;
+		gap: 1.5em !important;
+	}
 }
 
 /* 7. BUTONLAR VE İKONLAR İÇİN PREMIUM DOKUNUŞLAR */
@@ -1252,6 +1259,20 @@ header.major h2:after {
 	transition: all 0.3s ease !important;
 }
 
+.button.primary.vercell {
+    /* Mavi tonlarında modern bir gradyan */
+    background: linear-gradient(135deg, #0070f3 0%, #00a4ff 100%) !important;
+    border: none !important;
+    /* Mor gölge yerine hafif mavi gölge */
+    box-shadow: 0 4px 15px rgba(0, 112, 243, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.button.primary.vercell:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(0, 112, 243, 0.5) !important;
+    filter: brightness(1.2);
+}
 .button.primary:hover {
 	transform: translateY(-3px) !important;
 	box-shadow: 0 8px 25px rgba(171, 138, 191, 0.6) !important;
@@ -1334,112 +1355,126 @@ ul.actions.special {
 
 /* Intro kısmındaki metinleri iki yana yasla */
 #intro p {
-    text-align: justify !important;
-    text-justify: inter-word !important;
+	text-align: justify !important;
+	text-justify: inter-word !important;
 }
 
 .button.icon::before {
-    margin-right: 1em !important;
+	margin-right: 1em !important;
 }
 
 /* --- EKRANI VE KUTULARI YANLAMASINA GENİŞLETME AYARI --- */
 
 /* 1. Sitenin ana iskeletini yanlamasına büyütüyoruz */
 #wrapper {
-    width: 78em !important; /* Orijinal 64em'den 78em'e çıkardık, site genişledi */
-    max-width: calc(100% - 2em) !important;
+	width: 78em !important;
+	/* Orijinal 64em'den 78em'e çıkardık, site genişledi */
+	max-width: calc(100% - 2em) !important;
 }
 
 /* 2. Orta bölümün gereksiz yan boşluklarını kısıp alanı kutulara veriyoruz */
-#main > .main {
-    padding: 5em 3em 3em 3em !important; 
+#main>.main {
+	padding: 5em 3em 3em 3em !important;
 }
 
 /* 3. Kutuların içindeki yazıların kenarlara çok çarpmaması için ince bir ayar */
 @media screen and (min-width: 1280px) {
-    .features li {
-        padding: 2.5em 1.5em !important;
-    }
+	.features li {
+		padding: 2.5em 1.5em !important;
+	}
 }
 
 
 
 /* --- International Leadership İçin Özel 2'li Grid Düzeltmesi --- */
 @media screen and (min-width: 769px) {
-    /* 4'lü kuralı ezmek için hem id hem de üst id'yi belirtiyoruz */
-    #projects #leadership-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        max-width: 65em !important; /* Kutular çok uzun olmasın, şık dursun diye genişliği sınırladık */
-        margin: 0 auto !important; /* Kutuları ekranın tam ortasına kilitler */
-    }
+
+	/* 4'lü kuralı ezmek için hem id hem de üst id'yi belirtiyoruz */
+	#projects #leadership-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+		max-width: 65em !important;
+		/* Kutular çok uzun olmasın, şık dursun diye genişliği sınırladık */
+		margin: 0 auto !important;
+		/* Kutuları ekranın tam ortasına kilitler */
+	}
 }
 
 /* --- NAVBAR (MENÜ) TAM GENİŞLİK VE HİZALAMA FIX --- */
-#nav, #nav.alt {
-    width: 100% !important;
-    max-width: 78em !important; /* Sitenin yeni iskeletiyle tam eşitliyoruz */
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 auto !important; /* Ekranın tam ortasına kilitler */
-    border-radius: 12px 12px 0 0 !important; /* Üst köşelere hafif ve şık bir kavis */
+#nav,
+#nav.alt {
+	width: 100% !important;
+	max-width: 78em !important;
+	/* Sitenin yeni iskeletiyle tam eşitliyoruz */
+	left: 0 !important;
+	right: 0 !important;
+	margin: 0 auto !important;
+	/* Ekranın tam ortasına kilitler */
+	border-radius: 12px 12px 0 0 !important;
+	/* Üst köşelere hafif ve şık bir kavis */
 }
 
 /* Mobilde ekran dışına taşmasını engellemek için güvenlik ayarı */
 @media screen and (max-width: 768px) {
-    #nav, #nav.alt {
-        max-width: calc(100% - 2em) !important;
-        border-radius: 8px 8px 0 0 !important;
-    }
+
+	#nav,
+	#nav.alt {
+		max-width: calc(100% - 2em) !important;
+		border-radius: 8px 8px 0 0 !important;
+	}
 }
 
 /* Proje kutularındaki açıklamaları iki yana yasla (Butonlar ve başlıklar etkilenmez) */
 #projects div[style*="background"] p {
-    text-align: justify !important;
-    text-justify: inter-word !important;
+	text-align: justify !important;
+	text-justify: inter-word !important;
 }
+
 /* --- BÖLÜM BAŞLIKLARININ ÜSTÜNDEKİ FAZLA BOŞLUKLARI TIRAŞLAMA --- */
 
 /* Ana bölümlerin (About, Skills, Projects, Contact vb.) üstündeki 5em'lik dev boşluğu 2.5em'e düşürüyoruz */
-#main > .main {
-    padding-top: 2.5em !important; 
+#main>.main {
+	padding-top: 2.5em !important;
 }
 
 /* Sayfa içindeki alt başlıkların üstünde kalan fazladan boşlukları da kısıp daha kompakt yapıyoruz */
 header.major {
-    padding-top: 1em !important;
+	padding-top: 1em !important;
 }
 
 /* --- LANGUAGE SWITCHER (DİL SEÇENEĞİ BUTONU) --- */
 .lang-switch {
-    margin-left: 1.5em !important;
-    border-left: 1px solid rgba(255, 255, 255, 0.1); /* Menüyle buton arasına ince bir çizgi çeker */
-    padding-left: 1.5em !important;
+	margin-left: 1.5em !important;
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+	/* Menüyle buton arasına ince bir çizgi çeker */
+	padding-left: 1.5em !important;
 }
 
 .lang-btn {
-    background: rgba(171, 138, 191, 0.2) !important;
-    border: 1px solid rgba(171, 138, 191, 0.5) !important;
-    color: #f8fafc !important;
-    border-radius: 20px !important;
-    padding: 0 1.2em !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.5em; /* İkon ile yazı arasını açar */
+	background: rgba(171, 138, 191, 0.2) !important;
+	border: 1px solid rgba(171, 138, 191, 0.5) !important;
+	color: #f8fafc !important;
+	border-radius: 20px !important;
+	padding: 0 1.2em !important;
+	display: flex !important;
+	align-items: center !important;
+	gap: 0.5em;
+	/* İkon ile yazı arasını açar */
 }
 
 .lang-btn:hover {
-    background: rgba(171, 138, 191, 0.5) !important;
-    transform: translateY(-2px);
+	background: rgba(171, 138, 191, 0.5) !important;
+	transform: translateY(-2px);
 }
 
 /* Mobilde dil butonunun alt kata şık bir şekilde inmesi için */
 @media screen and (max-width: 768px) {
-    .lang-switch {
-        margin-left: 0 !important;
-        border-left: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1); /* Çizgiyi üste alır */
-        padding-left: 0 !important;
-        padding-top: 0.5em !important;
-        margin-top: 0.5em !important;
-    }
+	.lang-switch {
+		margin-left: 0 !important;
+		border-left: none;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		/* Çizgiyi üste alır */
+		padding-left: 0 !important;
+		padding-top: 0.5em !important;
+		margin-top: 0.5em !important;
+	}
 }
