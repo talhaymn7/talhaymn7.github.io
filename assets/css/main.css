@@ -28,6 +28,280 @@
 	cursor: default;
 }
 
+/* =====================================================
+   PORTFOLIO CUSTOM STYLES
+   ===================================================== */
+
+/* Available for hire badge */
+.available-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	background: rgba(100, 200, 130, 0.12);
+	border: 1px solid rgba(100, 200, 130, 0.4);
+	color: #64c882;
+	padding: 0.4em 1.4em;
+	border-radius: 30px;
+	font-size: 0.8em;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	margin-top: 1.2em;
+	text-transform: uppercase;
+}
+
+.available-badge::before {
+	content: '';
+	width: 8px;
+	height: 8px;
+	background: #64c882;
+	border-radius: 50%;
+	flex-shrink: 0;
+	animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+	0%, 100% { opacity: 1; transform: scale(1); }
+	50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* Project Cards */
+.project-card {
+	text-align: left;
+	padding: 2.5em;
+	border-radius: 20px;
+	margin-bottom: 2.5em;
+}
+
+.project-card--blockchain {
+	background: rgba(100, 200, 130, 0.07);
+	border: 1px solid rgba(100, 200, 130, 0.5);
+}
+
+.project-card--web {
+	background: rgba(255, 180, 80, 0.07);
+	border: 1px solid rgba(255, 180, 80, 0.5);
+}
+
+.project-card--purple {
+	background: rgba(171, 138, 191, 0.1);
+	border: 1px solid #ab8abf;
+}
+
+.project-card--blue {
+	background: rgba(140, 201, 240, 0.07);
+	border: 1px solid rgba(140, 201, 240, 0.5);
+}
+
+.project-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5em;
+}
+
+.project-header img {
+	width: 65px;
+	height: 65px;
+	margin-right: 20px;
+	border-radius: 12px;
+	object-fit: contain;
+}
+
+.project-header h3 {
+	margin: 0;
+	line-height: 1.2;
+	font-size: 1.8em;
+}
+
+h3.color-blockchain { color: #64c882; }
+h3.color-web        { color: #ffb450; }
+h3.color-purple     { color: #ab8abf; }
+h3.color-blue       { color: #8cc9f0; }
+
+.project-subtitle {
+	margin: 0.3em 0 0 0;
+	font-size: 0.82em;
+	opacity: 0.6;
+}
+
+/* Tech Badges */
+.tech-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45em;
+	margin-top: 1.4em;
+}
+
+.tech-badge {
+	display: inline-block;
+	padding: 0.28em 0.85em;
+	border-radius: 30px;
+	font-size: 0.7em;
+	font-weight: 700;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+}
+
+.tech-badge--dark {
+	background: rgba(255,255,255,0.04);
+	border: 1px solid rgba(255,255,255,0.12);
+	color: rgba(255,255,255,0.5);
+}
+
+.tech-badge--green {
+	background: rgba(100, 200, 130, 0.12);
+	border: 1px solid rgba(100, 200, 130, 0.4);
+	color: #64c882;
+}
+
+.tech-badge--orange {
+	background: rgba(255, 180, 80, 0.12);
+	border: 1px solid rgba(255, 180, 80, 0.4);
+	color: #ffb450;
+}
+
+.tech-badge--purple {
+	background: rgba(171, 138, 191, 0.12);
+	border: 1px solid rgba(171, 138, 191, 0.4);
+	color: #ab8abf;
+}
+
+.tech-badge--blue {
+	background: rgba(140, 201, 240, 0.12);
+	border: 1px solid rgba(140, 201, 240, 0.4);
+	color: #8cc9f0;
+}
+
+/* Status Badges */
+.status-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.42em 1em;
+	border-radius: 6px;
+	font-size: 0.78em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	cursor: default;
+}
+
+.status-badge--live {
+	background: rgba(100, 200, 130, 0.12);
+	border: 1px solid rgba(100, 200, 130, 0.4);
+	color: #64c882;
+}
+
+.status-badge--mvp {
+	background: rgba(171, 138, 191, 0.12);
+	border: 1px solid rgba(171, 138, 191, 0.4);
+	color: #ab8abf;
+}
+
+.status-badge--concept {
+	background: rgba(255,255,255,0.04);
+	border: 1px solid rgba(255,255,255,0.12);
+	color: rgba(255,255,255,0.45);
+}
+
+/* Colored CTA Buttons */
+a.btn-blockchain.button.primary {
+	background-color: #64c882 !important;
+	color: #1a1f23 !important;
+	border-color: #64c882 !important;
+	box-shadow: 0 4px 14px 0 rgba(100, 200, 130, 0.3) !important;
+	font-weight: 700 !important;
+}
+
+a.btn-web.button.primary {
+	background-color: #ffb450 !important;
+	color: #1a1f23 !important;
+	border-color: #ffb450 !important;
+	box-shadow: 0 4px 14px 0 rgba(255, 180, 80, 0.3) !important;
+	font-weight: 700 !important;
+}
+
+a.btn-purple.button.primary {
+	background-color: #ab8abf !important;
+	color: #ffffff !important;
+	border-color: #ab8abf !important;
+	box-shadow: 0 4px 14px 0 rgba(171, 138, 191, 0.35) !important;
+	font-weight: 700 !important;
+}
+
+a.btn-blue.button {
+	border-color: #8cc9f0 !important;
+	color: #8cc9f0 !important;
+	font-weight: 700 !important;
+}
+
+/* Contact Buttons */
+a.btn-contact.button.primary {
+	background-color: #ab8abf !important;
+	color: #ffffff !important;
+	border: none !important;
+	box-shadow: 0 4px 14px 0 rgba(171, 138, 191, 0.3) !important;
+	padding: 0 2.5em !important;
+}
+
+a.btn-contact-secondary.button {
+	padding: 0 2.5em !important;
+	border-color: rgba(255,255,255,0.2) !important;
+	color: rgba(255,255,255,0.55) !important;
+}
+
+a.btn-contact-secondary.button:hover {
+	border-color: rgba(255,255,255,0.5) !important;
+	color: rgba(255,255,255,0.9) !important;
+}
+
+/* Vision Box */
+.vision-box {
+	background: rgba(171, 138, 191, 0.04);
+	padding: 2.5em;
+	border-radius: 20px;
+	border: 1px solid rgba(171, 138, 191, 0.1);
+	text-align: center;
+}
+
+/* Footer Layout */
+#footer {
+	display: flex !important;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 5em 2em 3em 2em;
+	text-align: left;
+}
+
+#footer .footer-vision {
+	flex: 2;
+	min-width: 300px;
+	margin-right: 3em;
+	margin-bottom: 2em;
+}
+
+#footer .footer-social {
+	flex: 1;
+	min-width: 250px;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+#footer p.copyright {
+	width: 100%;
+	text-align: center;
+	margin-top: 4em;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	padding-top: 2em;
+	opacity: 0.6;
+	font-size: 0.8em;
+}
+
+/* Responsive */
+@media screen and (max-width: 736px) {
+	.project-card  { padding: 1.5em; }
+	.project-header h3 { font-size: 1.4em; }
+}
+
 html,
 body,
 div,
