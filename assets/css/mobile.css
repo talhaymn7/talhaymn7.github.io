@@ -117,50 +117,24 @@
         justify-content: center;
     }
 
-    /* Project cards */
-    .project-card {
-        padding: 1.5em !important;
-        margin-bottom: 1.5em !important;
-    }
+    /* Project cards — main.css handles padding reduction */
+    /* .project-card and .project-header styles are in main.css */
 
-    .project-card-header {
-        flex-wrap: wrap !important;
-        gap: 0.75em !important;
-    }
-
-    .project-card-header img {
-        width: 50px !important;
-        height: 50px !important;
-        margin-right: 0 !important;
-    }
-
-    /* Vercel link button: allow text to wrap */
-    .vercell {
-        white-space: normal !important;
-        height: auto !important;
-        line-height: 1.4 !important;
-        padding: 0.6em 1em !important;
-        text-align: center !important;
-        word-break: break-word !important;
-    }
-
-    /* Tag buttons in project card */
-    .actions.special {
-        flex-wrap: wrap !important;
-        gap: 0.4em;
-        justify-content: flex-start;
-    }
-
-    /* Vision section box padding */
-    #vision > div {
-        padding: 1.5em !important;
+    /* Tech badges — allow wrapping */
+    .tech-badges {
+        flex-wrap: wrap;
     }
 
     /* Footer: stack sections vertically */
-    #footer > section {
+    .footer-vision {
         flex: 1 1 100% !important;
         min-width: 0 !important;
         margin-right: 0 !important;
+    }
+
+    .footer-social {
+        flex: 1 1 100% !important;
+        min-width: 0 !important;
     }
 
     /* Contact section: hide unnecessary br */
@@ -182,11 +156,6 @@
     #footer {
         padding: 3em 1.5em 2em !important;
     }
-
-    /* Tighter project card padding */
-    .project-card {
-        padding: 1.25em !important;
-    }
 }
 
 /* =====================================================
@@ -201,10 +170,5 @@
 
     #footer {
         padding: 2.5em 1em 2em !important;
-    }
-
-    .project-card {
-        padding: 1em !important;
-        border-radius: 12px !important;
     }
 }
