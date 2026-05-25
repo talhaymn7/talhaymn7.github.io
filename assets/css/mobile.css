@@ -1,0 +1,210 @@
+/* =====================================================
+   Mobile Responsive Styles
+   ===================================================== */
+
+/* --- Hamburger Button --- */
+
+#mobile-nav-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10002;
+    width: 46px;
+    height: 46px;
+    background: rgba(247, 247, 247, 0.97);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    padding: 0;
+}
+
+#mobile-nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #636363;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+#mobile-nav-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#mobile-nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+#mobile-nav-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =====================================================
+   Small screens and below (≤ 736px)
+   ===================================================== */
+@media screen and (max-width: 736px) {
+
+    /* Show hamburger button */
+    #mobile-nav-toggle {
+        display: flex;
+    }
+
+    /* Nav overlay when open */
+    #nav.mobile-open {
+        display: flex !important;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        max-width: 100%;
+        background: rgba(247, 247, 247, 0.98);
+        z-index: 10001;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        padding: 2em 1em;
+    }
+
+    #nav.mobile-open ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3em;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    #nav.mobile-open ul li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    #nav.mobile-open ul li a {
+        display: block;
+        width: 100%;
+        font-size: 1.15em;
+        padding: 0.8em 1.5em;
+        height: auto;
+        line-height: 1.5;
+        border-radius: 10px;
+    }
+
+    #nav.mobile-open ul li.lang-switch {
+        margin-top: 1em;
+        padding-top: 1em;
+        border-top: 1px solid #ddd;
+    }
+
+    /* Header photo */
+    #header .logo img {
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+    /* Social action buttons — allow wrapping */
+    .spotlight .content .actions {
+        flex-wrap: wrap;
+        gap: 0.5em;
+        justify-content: center;
+    }
+
+    /* Project cards */
+    .project-card {
+        padding: 1.5em !important;
+        margin-bottom: 1.5em !important;
+    }
+
+    .project-card-header {
+        flex-wrap: wrap !important;
+        gap: 0.75em !important;
+    }
+
+    .project-card-header img {
+        width: 50px !important;
+        height: 50px !important;
+        margin-right: 0 !important;
+    }
+
+    /* Vercel link button: allow text to wrap */
+    .vercell {
+        white-space: normal !important;
+        height: auto !important;
+        line-height: 1.4 !important;
+        padding: 0.6em 1em !important;
+        text-align: center !important;
+        word-break: break-word !important;
+    }
+
+    /* Tag buttons in project card */
+    .actions.special {
+        flex-wrap: wrap !important;
+        gap: 0.4em;
+        justify-content: flex-start;
+    }
+
+    /* Vision section box padding */
+    #vision > div {
+        padding: 1.5em !important;
+    }
+
+    /* Footer: stack sections vertically */
+    #footer > section {
+        flex: 1 1 100% !important;
+        min-width: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Contact section: hide unnecessary br */
+    #contact p br {
+        display: none;
+    }
+}
+
+/* =====================================================
+   Extra small (≤ 480px)
+   ===================================================== */
+@media screen and (max-width: 480px) {
+
+    #header .logo img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    #footer {
+        padding: 3em 1.5em 2em !important;
+    }
+
+    /* Tighter project card padding */
+    .project-card {
+        padding: 1.25em !important;
+    }
+}
+
+/* =====================================================
+   Very small (≤ 360px)
+   ===================================================== */
+@media screen and (max-width: 360px) {
+
+    #header .logo img {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    #footer {
+        padding: 2.5em 1em 2em !important;
+    }
+
+    .project-card {
+        padding: 1em !important;
+        border-radius: 12px !important;
+    }
+}

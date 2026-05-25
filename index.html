@@ -6,6 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/mobile.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
@@ -34,6 +35,12 @@
 				</li>
 			</ul>
 		</nav>
+
+		<button id="mobile-nav-toggle" aria-label="Toggle navigation">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 
 		<div id="main">
 
@@ -123,10 +130,10 @@
 					<p>A portfolio of AI-driven accessibility, Social-Fi protocols, and scientific research.</p>
 				</header>
 
-				<div
+				<div class="project-card"
 					style="text-align: left; background: rgba(171, 138, 191, 0.1); padding: 2.5em; border-radius: 20px; margin-bottom: 2.5em; border: 1px solid #ab8abf;">
 
-					<div style="display: flex; align-items: center; margin-bottom: 1.5em;">
+					<div class="project-card-header" style="display: flex; align-items: center; margin-bottom: 1.5em;">
 						<img src="images/clear-cart-logo.png" alt="Clear Cart Logo"
 							style="width: 65px; height: 65px; margin-right: 20px; border-radius: 12px; object-fit: contain;">
 						<h3 style="color: #ab8abf; font-size: 1.8em; margin: 0; line-height: 1.2;">Clear Cart </h3>
@@ -164,10 +171,10 @@
 					</ul>
 				</div>
 
-				<div
+				<div class="project-card"
 					style="text-align: left; background: rgba(140, 201, 240, 0.08); padding: 2.5em; border-radius: 20px; margin-bottom: 3em; border: 1px solid #8cc9f0;">
 
-					<div style="display: flex; align-items: center; margin-bottom: 1.5em;">
+					<div class="project-card-header" style="display: flex; align-items: center; margin-bottom: 1.5em;">
 						<span class="icon solid fa-shopping-cart"
 							style="font-size: 1.8em; color: #8cc9f0; margin-right: 20px;"></span>
 						<h3 style="color: #636363; font-size: 1.6em; margin: 0; line-height: 1.2;">Clear Cart DO
@@ -181,11 +188,13 @@
 					</p>
 
 					<ul class="actions special" style="margin-top: 2em;">
-						<a href="https://monad-cc-project-nextjs-cvj7xs8su-talhaymn7s-projects.vercel.app/"
-							class="button primary small vercell"
-							style="color: #ffffff !important; font-weight: bold !important;">
-							Visit Website: Clear Cart DO on Vercell
-						</a>
+						<li>
+							<a href="https://monad-cc-project-nextjs-cvj7xs8su-talhaymn7s-projects.vercel.app/"
+								class="button primary small vercell"
+								style="color: #ffffff !important; font-weight: bold !important;">
+								Visit Website: Clear Cart DO on Vercell
+							</a>
+						</li>
 						<li>
 							<span class="button small" style="border-color: #50778f !important; 
                      color: #ccdde7 !important; 
@@ -212,6 +221,40 @@
                      background: #3e1094 !important">
 								Monad Concept
 							</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="project-card"
+					style="text-align: left; background: rgba(60, 97, 40, 0.1); padding: 2.5em; border-radius: 20px; margin-bottom: 2.5em; border: 1px solid #3C6128;">
+
+					<div class="project-card-header" style="display: flex; align-items: center; margin-bottom: 1.5em;">
+						<span class="icon solid fa-seedling"
+							style="font-size: 1.8em; color: #579400; margin-right: 20px;"></span>
+						<h3 style="color: #3C6128; font-size: 1.8em; margin: 0; line-height: 1.2;">Kitt</h3>
+					</div>
+
+					<p><strong>Project Description:</strong> [Kitt project description goes here. Add details about what Kitt does, its purpose, and its key features.]</p>
+
+					<p><em>Key Tech:</em> [Technology stack goes here]</p>
+
+					<ul class="actions">
+						<li>
+							<a href="https://kitt.tr" class="button primary small" target="_blank" style="background-color: #579400 !important;
+                  color: #ffffff !important;
+                  box-shadow: 0 4px 14px 0 rgba(87, 148, 0, 0.39) !important;
+                  border: none !important;
+                  font-weight: bold !important;">
+								Visit kitt.tr
+							</a>
+						</li>
+						<li>
+							<a href="https://platform.kitt.tr" class="button small" target="_blank" style="background-color: #3C6128 !important;
+                  color: #ffffff !important;
+                  border: none !important;
+                  font-weight: bold !important;">
+								Visit Platform
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -391,6 +434,27 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		(function () {
+			var $toggle = document.getElementById('mobile-nav-toggle');
+			var $nav = document.getElementById('nav');
+			if (!$toggle || !$nav) return;
+
+			$toggle.addEventListener('click', function () {
+				$toggle.classList.toggle('is-open');
+				$nav.classList.toggle('mobile-open');
+				document.body.style.overflow = $nav.classList.contains('mobile-open') ? 'hidden' : '';
+			});
+
+			$nav.querySelectorAll('a').forEach(function (link) {
+				link.addEventListener('click', function () {
+					$toggle.classList.remove('is-open');
+					$nav.classList.remove('mobile-open');
+					document.body.style.overflow = '';
+				});
+			});
+		})();
+	</script>
 
 </body>
 
