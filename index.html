@@ -61,11 +61,14 @@
 							software leadership across European teams.
 						</p>
 						<p>
-							Most recently I shipped <strong>platform.kitt.tr</strong>: a full production
-							traceability platform where farmer harvest records are batch-hashed with
-							<strong>SHA-256</strong> and committed immutably to <strong>Ethereum</strong>
-							via a custom smart contract. Alongside it, I built <strong>kitt.tr</strong>
-							— the corporate web presence — from scratch with Tailwind CSS.
+							Most recently I built <strong>platform.kitt.tr</strong>: an end-to-end
+							traceability and production management platform for industrial hemp, field to buyer.
+							Powered by <strong>FastAPI + SQLAlchemy</strong>, <strong>PostgreSQL</strong>,
+							and local <strong>Ollama</strong> AI for cloud-free production recipes —
+							secured with <strong>AES-256</strong> encryption and <strong>SHA-256</strong>
+							immutability guarantees. Alongside it, I built <strong>kitt.tr</strong>
+							— the corporate web presence — in pure HTML/CSS/JS with a full
+							<strong>Docker Compose</strong> stack and TR/EN/NL trilingual support.
 						</p>
 						<p>
 							I work across the full stack: <strong>FastAPI &amp; Node.js</strong> on the backend,
@@ -126,7 +129,7 @@
 			<section id="projects" class="main special">
 				<header class="major">
 					<h2>Projects</h2>
-					<p>Production deployments, AI-driven accessibility tools, and on-chain traceability platforms.</p>
+					<p>Production deployments, AI-driven accessibility tools, and end-to-end traceability platforms.</p>
 				</header>
 
 				<!-- platform.kitt.tr -->
@@ -135,27 +138,31 @@
 						<span class="icon solid fa-link" style="font-size: 2em; color: #64c882; margin-right: 20px; flex-shrink: 0;"></span>
 						<div>
 							<h3 class="color-blockchain">platform.kitt.tr</h3>
-							<p class="project-subtitle">Digital Traceability Platform — Live in Production</p>
+							<p class="project-subtitle">End-to-End Traceability &amp; Production Management — Live in Production</p>
 						</div>
 					</div>
 					<p>
-						Full-stack traceability platform for the Kitt initiative with three distinct
-						interfaces — <strong>admin</strong>, <strong>buyer</strong>, and
-						<strong>farmer</strong> — all served from a single <strong>FastAPI</strong> backend
-						backed by <strong>PostgreSQL</strong>. The centrepiece: harvest records are
-						batch-hashed with <strong>SHA-256</strong> and committed to a custom
-						<strong>Ethereum smart contract</strong>, creating an immutable on-chain audit trail.
-						Deployed to production on <strong>Railway</strong>.
+						End-to-end traceability and production management platform for industrial hemp — field to buyer.
+						Four fully separated interfaces (<strong>farmer</strong>, <strong>operations team</strong>,
+						<strong>buyer</strong>, <strong>super admin</strong>) served from a
+						<strong>FastAPI + SQLAlchemy ORM</strong> backend on <strong>PostgreSQL</strong>.
+						Data secured with <strong>AES-256</strong> encryption; immutability guaranteed via
+						<strong>SHA-256</strong> hashing. Local <strong>Ollama</strong> (Qwen2.5 &amp; Phi3)
+						generates AI-driven production recipes — zero cloud dependency. All services
+						(backend, database, AI, frontend, ngrok) containerised with <strong>Docker Compose</strong>.
+						3-person team; product vision, coordination and prioritisation led by
+						<strong>A. Talha Yaman</strong> as Project Manager.
 					</p>
 					<div class="tech-badges">
 						<span class="tech-badge tech-badge--green">FastAPI</span>
 						<span class="tech-badge tech-badge--green">Python</span>
+						<span class="tech-badge tech-badge--green">SQLAlchemy</span>
 						<span class="tech-badge tech-badge--green">PostgreSQL</span>
-						<span class="tech-badge tech-badge--green">Ethereum</span>
-						<span class="tech-badge tech-badge--green">Smart Contract</span>
+						<span class="tech-badge tech-badge--green">Ollama</span>
+						<span class="tech-badge tech-badge--dark">AES-256</span>
 						<span class="tech-badge tech-badge--dark">SHA-256</span>
-						<span class="tech-badge tech-badge--dark">JavaScript</span>
-						<span class="tech-badge tech-badge--dark">Railway</span>
+						<span class="tech-badge tech-badge--dark">Docker Compose</span>
+						<span class="tech-badge tech-badge--dark">Nginx</span>
 					</div>
 					<ul class="actions" style="margin-top: 1.5em; margin-bottom: 0;">
 						<li>
@@ -179,17 +186,22 @@
 						</div>
 					</div>
 					<p>
-						Corporate web presence for the <strong>Kitt</strong> initiative, built from scratch.
-						Designed for clear brand communication and performance, using
-						<strong>Tailwind CSS</strong> for the utility-first layout and vanilla
-						<strong>JavaScript</strong> for interactivity. DNS managed via
-						<strong>Cloudflare</strong> with production hosting on <strong>Railway</strong>.
+						Corporate web presence for <strong>Kitt</strong>, built from scratch with zero
+						frameworks or build steps — pure <strong>HTML/CSS/JS</strong> served via
+						<strong>Nginx</strong>. Three-service <strong>Docker Compose</strong> stack:
+						Nginx (static files + API proxy), a <strong>FastAPI</strong> backend handling
+						<strong>/api/contact</strong> and <strong>/api/quote</strong> with SMTP email,
+						and ngrok for local dev tunnelling. Custom <strong>i18n.js</strong> system for
+						TR/EN/NL trilingual support, an SVG hemp field animation, and
+						<code>fetch()</code>-powered async form submission. DNS via <strong>Cloudflare</strong>.
 					</p>
 					<div class="tech-badges">
-						<span class="tech-badge tech-badge--orange">Tailwind CSS</span>
+						<span class="tech-badge tech-badge--orange">HTML5 / CSS3</span>
 						<span class="tech-badge tech-badge--orange">JavaScript</span>
-						<span class="tech-badge tech-badge--dark">HTML5 / CSS3</span>
-						<span class="tech-badge tech-badge--dark">Railway</span>
+						<span class="tech-badge tech-badge--orange">FastAPI</span>
+						<span class="tech-badge tech-badge--dark">Nginx</span>
+						<span class="tech-badge tech-badge--dark">Docker Compose</span>
+						<span class="tech-badge tech-badge--dark">i18n (TR/EN/NL)</span>
 						<span class="tech-badge tech-badge--dark">Cloudflare DNS</span>
 					</div>
 					<ul class="actions" style="margin-top: 1.5em; margin-bottom: 0;">
@@ -390,8 +402,8 @@
 				<h2>My Vision</h2>
 				<p style="text-align: justify; margin: 0; line-height: 1.6;">
 					Technology is more than a tool — it's a catalyst for real-world impact. From building
-					<strong>Clear Cart</strong>'s AI-driven accessibility pipeline to stamping agricultural
-					harvest data immutably onto <strong>Ethereum</strong> via <strong>platform.kitt.tr</strong>,
+					<strong>Clear Cart</strong>'s AI-driven accessibility pipeline to digitising the entire
+					agricultural supply chain — field to buyer — with <strong>platform.kitt.tr</strong>,
 					I engineer systems that matter.
 				</p>
 			</section>

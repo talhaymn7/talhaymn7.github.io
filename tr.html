@@ -61,11 +61,14 @@
 							lise yıllarımda başladı.
 						</p>
 						<p>
-							En son olarak <strong>platform.kitt.tr</strong>'yi hayata geçirdim: çiftçi ekim
-							kayıtlarının <strong>SHA-256</strong> ile toplu olarak hashlenip özel bir
-							<strong>Ethereum akıllı sözleşmesi</strong> aracılığıyla değiştirilemez biçimde
-							zincire yazıldığı bir prodüksiyon izlenebilirlik platformu. Bunun yanı sıra
-							<strong>kitt.tr</strong>'yi de sıfırdan Tailwind CSS ile geliştirdim.
+							En son olarak <strong>platform.kitt.tr</strong>'yi hayata geçirdim: endüstriyel
+							kenevir üretiminde tarladan alıcıya uçtan uca izlenebilirlik ve üretim yönetim
+							platformu. <strong>FastAPI + SQLAlchemy</strong>, <strong>PostgreSQL</strong> ve
+							bulut bağımlılığı olmadan çalışan yerel <strong>Ollama</strong> AI ile
+							geliştirildi; <strong>AES-256</strong> şifreleme ve <strong>SHA-256</strong>
+							hash ile veri güvenliği sağlandı. Bunun yanı sıra <strong>kitt.tr</strong>'yi
+							sıfırdan saf HTML/CSS/JS ile, tam bir <strong>Docker Compose</strong> altyapısı
+							ve TR/EN/NL üç dil desteğiyle geliştirdim.
 						</p>
 						<p>
 							Full-stack çalışıyorum: backend'de <strong>FastAPI &amp; Node.js</strong>,
@@ -127,7 +130,7 @@
 			<section id="projects" class="main special">
 				<header class="major">
 					<h2>Projeler</h2>
-					<p>Prodüksiyon deployları, yapay zeka destekli erişilebilirlik araçları ve zincir üstü izlenebilirlik platformları.</p>
+					<p>Prodüksiyon deployları, yapay zeka destekli erişilebilirlik araçları ve uçtan uca izlenebilirlik platformları.</p>
 				</header>
 
 				<!-- platform.kitt.tr -->
@@ -136,27 +139,33 @@
 						<span class="icon solid fa-link" style="font-size: 2em; color: #64c882; margin-right: 20px; flex-shrink: 0;"></span>
 						<div>
 							<h3 class="color-blockchain">platform.kitt.tr</h3>
-							<p class="project-subtitle">Dijital İzlenebilirlik Platformu — Prodüksiyonda Canlı</p>
+							<p class="project-subtitle">Uçtan Uca İzlenebilirlik &amp; Üretim Yönetim Platformu — Prodüksiyonda Canlı</p>
 						</div>
 					</div>
 					<p>
-						Kitt girişimi için geliştirilmiş tam kapsamlı izlenebilirlik platformu.
-						Tek bir <strong>FastAPI</strong> backend üzerinden servis edilen üç ayrı
-						arayüz: <strong>yönetici</strong>, <strong>alıcı</strong> ve <strong>çiftçi</strong>.
-						Platformun özü: ekim kayıtları toplu olarak <strong>SHA-256</strong> ile
-						hashlenip özel bir <strong>Ethereum akıllı sözleşmesi</strong> aracılığıyla
-						zincire yazılıyor; değiştirilemez bir denetim izi oluşturuluyor.
-						<strong>Railway</strong> üzerinde prodüksiyona alındı.
+						Endüstriyel kenevir üretiminde tarladan alıcıya uçtan uca izlenebilirlik ve
+						üretim yönetim platformu. Dört tamamen ayrışan arayüz
+						(<strong>çiftçi</strong>, <strong>operasyon ekibi</strong>,
+						<strong>alıcı</strong>, <strong>süper admin</strong>) tek bir
+						<strong>FastAPI + SQLAlchemy ORM</strong> backend üzerinden
+						<strong>PostgreSQL</strong> ile servis ediliyor. Veri güvenliği için
+						<strong>AES-256</strong> şifreleme, değiştirilemezlik garantisi için
+						<strong>SHA-256</strong> hash. Yerel <strong>Ollama</strong> entegrasyonu
+						(Qwen2.5 &amp; Phi3) ile bulut bağımlılığı olmadan yapay zeka destekli üretim
+						reçeteleri. Tüm servisler <strong>Docker Compose</strong> ile konteynerize edilmiş.
+						3 kişilik ekipte ürün vizyonu, koordinasyon ve önceliklendirme
+						<strong>A. Talha Yaman</strong> tarafından Proje Yöneticisi olarak yürütülüyor.
 					</p>
 					<div class="tech-badges">
 						<span class="tech-badge tech-badge--green">FastAPI</span>
 						<span class="tech-badge tech-badge--green">Python</span>
+						<span class="tech-badge tech-badge--green">SQLAlchemy</span>
 						<span class="tech-badge tech-badge--green">PostgreSQL</span>
-						<span class="tech-badge tech-badge--green">Ethereum</span>
-						<span class="tech-badge tech-badge--green">Akıllı Sözleşme</span>
+						<span class="tech-badge tech-badge--green">Ollama</span>
+						<span class="tech-badge tech-badge--dark">AES-256</span>
 						<span class="tech-badge tech-badge--dark">SHA-256</span>
-						<span class="tech-badge tech-badge--dark">JavaScript</span>
-						<span class="tech-badge tech-badge--dark">Railway</span>
+						<span class="tech-badge tech-badge--dark">Docker Compose</span>
+						<span class="tech-badge tech-badge--dark">Nginx</span>
 					</div>
 					<ul class="actions" style="margin-top: 1.5em; margin-bottom: 0;">
 						<li>
@@ -180,17 +189,24 @@
 						</div>
 					</div>
 					<p>
-						<strong>Kitt</strong> girişimi için sıfırdan geliştirilen kurumsal web sitesi.
-						Net marka iletişimi ve performansa odaklanılarak, layout için utility-first
-						yaklaşım sunan <strong>Tailwind CSS</strong> ve interaktivite için vanilla
-						<strong>JavaScript</strong> kullanıldı. DNS <strong>Cloudflare</strong>
-						üzerinden yönetiliyor; hosting <strong>Railway</strong> üzerinde prodüksiyonda.
+						<strong>Kitt</strong> girişimi için sıfırdan geliştirilen kurumsal web sitesi;
+						herhangi bir framework veya derleme adımı gerektirmeyen saf
+						<strong>HTML/CSS/JS</strong>, <strong>Nginx</strong> üzerinde sunuluyor.
+						Üç servisli <strong>Docker Compose</strong> altyapısı: Nginx (statik dosyalar +
+						API proxy), <strong>/api/contact</strong> ve <strong>/api/quote</strong>
+						endpoint'leri ile SMTP e-posta gönderimi sağlayan <strong>FastAPI</strong>
+						backend ve yerel geliştirme için ngrok tüneli. Özel <strong>i18n.js</strong>
+						sistemiyle TR/EN/NL üç dil desteği, SVG kenevir tarlası animasyonu ve
+						<code>fetch()</code> tabanlı asenkron form gönderimi.
+						DNS <strong>Cloudflare</strong> üzerinden yönetiliyor.
 					</p>
 					<div class="tech-badges">
-						<span class="tech-badge tech-badge--orange">Tailwind CSS</span>
+						<span class="tech-badge tech-badge--orange">HTML5 / CSS3</span>
 						<span class="tech-badge tech-badge--orange">JavaScript</span>
-						<span class="tech-badge tech-badge--dark">HTML5 / CSS3</span>
-						<span class="tech-badge tech-badge--dark">Railway</span>
+						<span class="tech-badge tech-badge--orange">FastAPI</span>
+						<span class="tech-badge tech-badge--dark">Nginx</span>
+						<span class="tech-badge tech-badge--dark">Docker Compose</span>
+						<span class="tech-badge tech-badge--dark">i18n (TR/EN/NL)</span>
 						<span class="tech-badge tech-badge--dark">Cloudflare DNS</span>
 					</div>
 					<ul class="actions" style="margin-top: 1.5em; margin-bottom: 0;">
@@ -395,8 +411,8 @@
 				<p style="text-align: justify; margin: 0; line-height: 1.6;">
 					Teknoloji sadece bir araç değil — gerçek dünyadaki sorunlar için bir katalizör.
 					<strong>Clear Cart</strong>'ın yapay zeka destekli erişilebilirlik hattını
-					oluşturmaktan, tarımsal ekim verilerini <strong>platform.kitt.tr</strong>
-					aracılığıyla <strong>Ethereum</strong>'a değiştirilemez biçimde yazmaya kadar —
+					oluşturmaktan, tarım tedarik zincirinin tamamını — tarladan alıcıya —
+					<strong>platform.kitt.tr</strong> ile dijitalleştirmeye kadar —
 					fark yaratan sistemler inşa ediyorum.
 				</p>
 			</section>
