@@ -172,6 +172,24 @@ h3.color-blue       { color: #8cc9f0; }
 }
 
 /* Status Badges */
+.project-card ul.actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	gap: 0.6em;
+}
+
+.project-card ul.actions li {
+	display: flex;
+	align-items: stretch;
+	margin: 0;
+}
+
+.project-card ul.actions li .status-badge {
+	display: flex;
+	align-items: center;
+}
+
 .status-badge {
 	display: inline-flex;
 	align-items: center;
@@ -202,25 +220,41 @@ h3.color-blue       { color: #8cc9f0; }
 	color: rgba(255,255,255,0.45);
 }
 
+.status-badge--expired {
+	background: rgba(255,255,255,0.04);
+	border: 1px solid rgba(255,100,100,0.35);
+	color: rgba(255,120,120,0.75);
+}
+
 /* Colored CTA Buttons */
 a.btn-blockchain.button.primary {
-	background-color: #64c882 !important;
+	background: #64c882 !important;
 	color: #1a1f23 !important;
 	border-color: #64c882 !important;
 	box-shadow: 0 4px 14px 0 rgba(100, 200, 130, 0.3) !important;
 	font-weight: 700 !important;
 }
 
+a.btn-blockchain.button.primary:hover {
+	background: #50b86e !important;
+	box-shadow: 0 8px 25px rgba(100, 200, 130, 0.5) !important;
+}
+
 a.btn-web.button.primary {
-	background-color: #ffb450 !important;
+	background: #ffb450 !important;
 	color: #1a1f23 !important;
 	border-color: #ffb450 !important;
 	box-shadow: 0 4px 14px 0 rgba(255, 180, 80, 0.3) !important;
 	font-weight: 700 !important;
 }
 
+a.btn-web.button.primary:hover {
+	background: #e8a040 !important;
+	box-shadow: 0 8px 25px rgba(255, 180, 80, 0.5) !important;
+}
+
 a.btn-purple.button.primary {
-	background-color: #ab8abf !important;
+	background: #ab8abf !important;
 	color: #ffffff !important;
 	border-color: #ab8abf !important;
 	box-shadow: 0 4px 14px 0 rgba(171, 138, 191, 0.35) !important;
